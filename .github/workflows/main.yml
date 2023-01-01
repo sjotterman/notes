@@ -2,12 +2,12 @@ name: CI
 on: [push, pull_request]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Install modules
-      run: npm ci
-    - name: Run ESLint
-      run:  npm run lint
-    - name: Check format
-      run: npm run check-format
+      - uses: actions/checkout@v2
+      - name: Install modules
+        run: npm ci
+      - name: Run ESLint
+        run: npm run lint
+      - name: Check format
+        run: npm run check-format
